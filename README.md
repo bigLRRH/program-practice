@@ -1,2 +1,2 @@
 # program-practice
- 练习用
+ 人生苦短，我选择躺平
