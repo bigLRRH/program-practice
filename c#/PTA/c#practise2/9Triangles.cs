@@ -50,8 +50,7 @@ namespace HelloWorldApplication{
             string[] input_ = input.Split(' ');
 
             int arraysize = 1;
-            foreach (string element in input_)
-                arraysize++;
+            foreach (string element in input_) arraysize++;
 
             int[] dataArray = new int[arraysize];         
 

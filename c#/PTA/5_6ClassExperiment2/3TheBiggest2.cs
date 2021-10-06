@@ -10,9 +10,9 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             string str = Console.ReadLine();
-            string[] str_ = str.Split();
-            double a = str_[0];
-            double b = str_[1];
+            string[] str_ = str.Split(' ');
+            double a = double.Parse(str_[0]);
+            double b = double.Parse(str_[1]);
 
             if (a > b)
             {

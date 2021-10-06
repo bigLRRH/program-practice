@@ -29,7 +29,7 @@ namespace ConsoleApplication1
             else
                 price = price*0.85;
             
-            Console.WriteLine("{0:0}",price);
+            Console.WriteLine("{0:f0}",price);
         }
     }
 }
