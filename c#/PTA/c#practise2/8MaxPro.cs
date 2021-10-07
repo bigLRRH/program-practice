@@ -45,11 +45,8 @@ namespace HelloWorldApplication{
         int[] DataInput(){
             string input = Console.ReadLine();
             string[] input_ = input.Split(' ');
-            int arraysize = 1;
-            foreach (string element in input_)
-                arraysize++;
 
-            int[] dataArray = new int[arraysize];         
+            int[] dataArray = new int[input_.Length];         
 
             int i = 0;
             foreach(string element in input_){
