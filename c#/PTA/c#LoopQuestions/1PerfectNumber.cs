@@ -28,16 +28,18 @@ namespace LoopQuestions{
             int n = Int32.Parse(input.Substring(idx+1));
 
             int k = 0;//检测区间内是否没有完数
+            int sum = 0;
 
             for(int i=m;i<=n;i++){
                 if(i==1){
                     k++;
                     continue;
                 }
-                int sum = 0;
-                int[] a = new int[i/2];
+
+                sum = 0;
                 for(int j=1;j<=i/2;j++)
-                    sum += i%j==0?j:0;
+                    if(i%j==0)
+                        sum+=j;
 
                 if(sum==i){
                     Console.Write("{0} = 1",i);
