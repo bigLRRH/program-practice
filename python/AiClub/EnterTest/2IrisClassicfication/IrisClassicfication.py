@@ -15,7 +15,7 @@ k = 10
 
 for testdata in test_datalist:
     #计算距离并将[距离，类别]赋值distancelist
-    distancelist = [[0,0]]
+    distancelist = []
     for traindata in train_datalist:
         #距离=f(|x1-x2|)+g(|y1-y2|),不知道怎么取直接取几何距离
         distance = (abs(testdata[0]-traindata[0]))**2 + (abs(testdata[1]-traindata[1]))**2
@@ -23,11 +23,11 @@ for testdata in test_datalist:
 
     #根据距离排序distance(冒泡排序)
     i=1
-    while i<len(distancelist):
-        j=1
-        while j<len(distancelist):
-            if distancelist[j,0]<distancelist[j+1,0]:
-                distancelist[j,0],distancelist[j+1,0] = distancelist[j+1,0],distancelist[j,0]
+    while i<len(distancelist)-1:
+        j=0
+        while j<len(distancelist)-1:
+            if distancelist[j][0]<distancelist[j+1][0]:
+                distancelist[j][0],distancelist[j+1][0] = distancelist[j+1][0],distancelist[j][0]
             j+=1
         i+=1
 
@@ -35,11 +35,11 @@ for testdata in test_datalist:
     x=1
     label1,label2,label3=0,0,0
     while x<=k:
-        if distancelist[x,1] == 0.:
+        if distancelist[x][1] == 0.:
             label1 +=1
-        elif distancelist[x,1] == 1.:
+        elif distancelist[x][1] == 1.:
             label2 +=1
-        elif distancelist[x,1] == 2.:
+        elif distancelist[x][1] == 2.:
             label3 +=1
 
     #判断当前testdata的类别
