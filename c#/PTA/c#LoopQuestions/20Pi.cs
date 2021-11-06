@@ -24,7 +24,7 @@ using System;
 */
 
 namespace LoopQuestions{
-    class Pi{
+    class Pi2{
         static void Main(string[] args){
             double PI = 4 *(1.0-1.0/3 +1.0/5 -1.0/7 +1.0/9 -1.0/11 +1.0/13);
 
