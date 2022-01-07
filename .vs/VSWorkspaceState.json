@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\course",
+    "\\course\\c++"
   ],
-  "SelectedNode": "\\course",
+  "SelectedNode": "\\course\\c++",
   "PreviewInSolutionExplorer": false
 }
