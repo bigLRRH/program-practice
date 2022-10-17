@@ -1,0 +1,2 @@
+BACKUP DATABASE [202111040656]
+    TO DISK = 'D:\DBtest.bak';

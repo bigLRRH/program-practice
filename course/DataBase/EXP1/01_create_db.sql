@@ -1,0 +1,13 @@
+CREATE DATABASE [202111040656]
+  ON PRIMARY
+  (
+    NAME = [202111040656_data],
+    FILENAME = 'C:\DBtest\202111040656_data.mdf',
+    SIZE = 10
+  )
+  LOG ON
+  (
+    NAME = [202111040656_log],
+    FILENAME = 'C:\DBtest\202111040656_log.ldf',
+    SIZE = 5
+  )
