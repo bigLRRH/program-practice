@@ -9,16 +9,16 @@ struct binaryTreeNode {
 	binaryTreeNode() :element('#'), leftChild(nullptr), rightChild(nullptr) {}
 	binaryTreeNode(const char& theElement) :element(theElement), leftChild(nullptr), rightChild(nullptr) {}
 };
-struct binaryTreeNode* levelOrderCreateTree(string& s);
-void preOrderPrint(const struct binaryTreeNode* t);
-void inOrderPrint(const struct binaryTreeNode* t);
-void postOrderPrint(const struct binaryTreeNode* t);
-int countLeaves(const struct binaryTreeNode* t);
+binaryTreeNode* levelOrderCreateTree(const string& s);
+void preOrderPrint(binaryTreeNode* t);
+void inOrderPrint(binaryTreeNode* t);
+void postOrderPrint(binaryTreeNode* t);
+int countLeaves(binaryTreeNode* t);
 int main()
 {
 	string s;
 	cin >> s;
-	struct binaryTreeNode* root = levelOrderCreateTree(s);
+	binaryTreeNode* root = levelOrderCreateTree(s);
 	if (root->element == '#')
 	{
 		cout << 0 << endl;
@@ -33,15 +33,15 @@ int main()
 	cout << countLeaves(root) << endl;
 	return 0;
 }
-struct binaryTreeNode* levelOrderCreateTree(string& s)
+binaryTreeNode* levelOrderCreateTree(const string& s)
 {
 	int i(0);
-	struct binaryTreeNode* root = new binaryTreeNode(s[i++]);
-	queue<struct binaryTreeNode*> q;
+	binaryTreeNode* root = new binaryTreeNode(s[i++]);
+	queue<binaryTreeNode*> q;
 	q.push(root);
 	while (q.size())
 	{
-		struct binaryTreeNode* tmp = q.front();
+		binaryTreeNode* tmp = q.front();
 		q.pop();
 		if (tmp->element != '#')
 		{
@@ -53,7 +53,7 @@ struct binaryTreeNode* levelOrderCreateTree(string& s)
 	}
 	return root;
 }
-void preOrderPrint(const struct binaryTreeNode* t)
+void preOrderPrint(binaryTreeNode* t)
 {
 	if (!t || t->element == '#')
 		return;
@@ -61,7 +61,7 @@ void preOrderPrint(const struct binaryTreeNode* t)
 	preOrderPrint(t->leftChild);
 	preOrderPrint(t->rightChild);
 }
-void inOrderPrint(const struct binaryTreeNode* t)
+void inOrderPrint(binaryTreeNode* t)
 {
 	if (!t || t->element == '#')
 		return;
@@ -69,7 +69,7 @@ void inOrderPrint(const struct binaryTreeNode* t)
 	cout << t->element;
 	inOrderPrint(t->rightChild);
 }
-void postOrderPrint(const struct binaryTreeNode* t)
+void postOrderPrint(binaryTreeNode* t)
 {
 	if (!t || t->element == '#')
 		return;
@@ -77,7 +77,7 @@ void postOrderPrint(const struct binaryTreeNode* t)
 	postOrderPrint(t->rightChild);
 	cout << t->element;
 }
-int countLeaves(const struct binaryTreeNode* t)
+int countLeaves(binaryTreeNode* t)
 {
 	if (!t || t->element == '#')
 		return 0;
