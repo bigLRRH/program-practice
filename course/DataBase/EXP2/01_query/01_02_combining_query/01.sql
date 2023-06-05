@@ -1,0 +1,4 @@
+USE [202111040656]
+-- ① 统计有学生选修的课程门数。 
+SELECT COUNT(DISTINCT C#)
+FROM SC; 

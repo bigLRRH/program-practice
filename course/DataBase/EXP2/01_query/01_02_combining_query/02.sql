@@ -1,0 +1,14 @@
+USE [202111040656]
+-- ② 求选修 C1 课程的女学生的平均年龄。 
+SELECT AVG(AGE)
+FROM S
+WHERE SEX = 'F' AND S# IN
+(
+    SELECT S#
+    FROM SC
+    WHERE C# = 'C1'
+);
+--验证正确性
+SELECT AVG(AGE)
+FROM S,SC
+WHERE S.S#=SC.S# AND C#='C1' AND SEX = 'F';

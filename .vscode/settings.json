@@ -2,6 +2,8 @@
     "files.associations": {
         "stack": "cpp",
         "queue": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ios": "c",
+        "xiosbase": "c"
     }
 }

@@ -11,5 +11,5 @@ WHERE S# = 'S1'
     );
 --验证正确性
 SELECT DISTINCT A.C#
-FROM SC AS A,SC AS B
-WHERE A.C# = B.C# AND A.S#='S1' AND B.S#='S5';
+FROM SC AS X,SC AS Y
+WHERE X.C# = Y.C# AND X.S#='S1' AND Y.S#='S5';

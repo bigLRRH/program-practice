@@ -1,0 +1,5 @@
+USE [202111040656]
+-- ② 修改 ZHOU 同学的年龄为 18 岁。 
+UPDATE S
+   SET AGE=18
+   WHERE SNAME='ZHOU';

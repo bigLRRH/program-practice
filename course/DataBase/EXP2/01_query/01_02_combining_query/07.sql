@@ -1,0 +1,5 @@
+USE [202111040656]
+-- ⑦ 检索姓名以 Z 打头的所有学生的姓名和年龄。
+SELECT SNAME,AGE
+FROM S
+WHERE SNAME LIKE 'Z%';

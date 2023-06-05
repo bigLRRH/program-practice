@@ -1,0 +1,4 @@
+USE [202111040656]
+-- ⑤ 删除 SC 中学生 S10 选课 C2 的数据。
+DELETE FROM SC
+WHERE S# = 'S10' AND C# = 'C2';
